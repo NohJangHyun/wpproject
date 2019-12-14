@@ -26,10 +26,6 @@ function validateForm(form, options) {
     return 'Email is required.';
   }
 
-  if (!type) {
-    return 'Type is required.'
-  }
-
   if (!form.password && options.needPassword) {
     return 'Password is required.';
   }
@@ -114,7 +110,6 @@ router.post('/', catchErrors(async (req, res, next) => {
   user = new User({
     name: req.body.name,
     email: req.body.email,
-    type: req.body.type
   });
   user.password = await user.generateHash(req.body.password);
   await user.save();

@@ -1,8 +1,25 @@
 extends layout
 
 block hero-unit
-  .jumbotron
+  h1 어디로 떠나세요?
+
+  block content
     .container
+      form.form-inline.search-input-group(action='/questions', method='GET')
+        i.fa.fa-search
+        input.form-control.mr-sm-2(type='text', name='term', placeholder='Search', aria-label='Search', value=term)
+ 
+  .slideshow
+    img.active(src='images/bg1.jpg')
+    img(src='images/bg2.jpg')
+    img(src='images/bg3.jpg')
+  .indicator
+    ul
+      li.active
+      li
+      li
+  script(src='https://unpkg.com/jquery@3.2.1/dist/jquery.js')
+  script(src='slideshow.js')
 
 block content
   .container
@@ -11,4 +28,4 @@ block content
         h3 고객센터
         h2 1234-1234
         p 일반 문의 09:00~22:00 / 실시간 문의 09:00~18:00 
-  
+    

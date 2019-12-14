@@ -9,12 +9,57 @@ body {
 a:hover {
   text-decoration: none; }
 
-.jumbotron {
+  h1 {
+  text-align:center;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.slideshow {
+  grid-template-columns: repeat(auto-fit, 100px);
   margin-top: -1em;
-  background: url("/images/bg.jpg") no-repeat left center;
-  min-height: 20em;
+  min-height: 40em;
   color: #fff;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); }
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
+  width: 800px;
+  height: 600px;
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+  
+.slideshow img {
+  position: absolute;
+  opacity: 0;
+  transition: all 1s ease;
+}
+  
+.slideshow img.active {
+  opacity: 1.0;
+}
+.indicator {
+  width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+.indicator ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+  
+.indicator ul li {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+.indicator ul li.active {
+  background-color: #fff;
+}
 
 .form-actions {
   padding: 19px 20px 20px;
@@ -147,5 +192,7 @@ a:hover {
   .question-like-btn.disabled, .answer-like-btn.disabled {
     color: #bbb;
     cursor: default; }
+  
+
 
 /*# sourceMappingURL=style.css.map */

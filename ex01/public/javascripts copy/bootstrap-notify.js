@@ -5,22 +5,6 @@
 * License: MIT License
 * Website: https://github.com/mouse0270/bootstrap-growl
 */
-function changeActive(idx) {
-  $(".slideshow > img").removeClass("active");
-  $(".indicator > ul > li").removeClass("active");
-  $(".slideshow").find(">img:nth-child(" + idx + ")").addClass("active");
-  $(".indicator").find(">ul>li:nth-child(" + idx + ")").addClass("active");
-}
-$(".indicator > ul > li").click(function() {
-  var idx = $(".indicator > ul > li").index(this)+1;
-  changeActive(idx);
-});
-var SetTime = setInterval(function() {    
-  var idx = $(".indicator > ul").find(".active").index()+2;
-  if(idx > $(".indicator > ul > li").length) {idx = 1;}
-  changeActive(idx);
-}, 3000);   
-
 (function (factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.

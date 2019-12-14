@@ -34,7 +34,7 @@ module.exports = (app, io) => {
   //=======================================================
   mongoose.Promise = global.Promise; // ES6 Native Promise를 mongoose에서 사용한다.
   const connStr = 'mongodb+srv://watercar99:wkdgus5566@cluster0-fjvdq.mongodb.net/test?retryWrites=true&w=majority';
-// 아래는 mLab을 사용하는 경우의 예: 본인의 접속 String으로 바꾸세요.
+  // 아래는 mLab을 사용하는 경우의 예: 본인의 접속 String으로 바꾸세요.
   // const connStr = 'mongodb://dbuser1:mju12345@ds113825.mlab.com:13825/sampledb1';
   mongoose.connect(connStr, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
   mongoose.connection.on('error', console.error);
