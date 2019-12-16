@@ -2,8 +2,8 @@
   label(for="title") Tour Title
   input.form-control(type="text", name="title", placeholder="What's your tour title?", value=question.title)
 .form-group
-  label(for="question") About
-  textarea.form-control(name="content", rows="5")= question.content
+  label(for="question") Tour Info and Price
+  textarea.form-control(name="content", rows="5", placeholder="Write tour info and price")= question.content
 .form-group
   label(for="tags") Theme
   input.form-control(type="text", name="tags", placeholder="theme's are separated by spaces", value=question.tags ? question.tags.join(" ") : "")

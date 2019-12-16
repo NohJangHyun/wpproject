@@ -16,7 +16,15 @@ block content
       .form-group
         label(for='password_confirmation') Password Confirmation
         input.form-control(type='password', id='password_confirmation', name='password_confirmation', placeholder='Password')
+      .form-group
+        label(for='u_type') User type
+        select.form-control(type='text', id='u_type', name='u_type')
+          option(type="text", value="custom") 고객
+          option(type="text", value="guide") 가이드
+          option(type="text", value="admin") 관리자
       
+
+
       a.btn.btn-outline-secondary(href='/users') Sign in
       | 
       button.btn.btn-primary(type='submit') Register 
